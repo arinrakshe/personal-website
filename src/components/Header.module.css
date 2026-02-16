@@ -1,0 +1,79 @@
+.header {
+    background-color: var(--card-background);
+    border-bottom: 1px solid #eaeaea;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.navLink {
+    color: #666;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.navLink:hover {
+    color: var(--primary-color);
+}
+
+.auth {
+    display: flex;
+    gap: 1rem;
+}
+
+.loginBtn,
+.signupBtn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.loginBtn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: #666;
+}
+
+.loginBtn:hover {
+    color: var(--text-color);
+}
+
+.signupBtn {
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: white;
+}
+
+.signupBtn:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        /* Simple mobile hide for now, or hamburger */
+    }
+}

@@ -1,0 +1,25 @@
+.footer {
+    background-color: var(--card-background);
+    border-top: 1px solid #eaeaea;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+}
+
+.links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.links a:hover {
+    color: var(--primary-color);
+}

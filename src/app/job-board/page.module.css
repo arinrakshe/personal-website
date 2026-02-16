@@ -1,0 +1,62 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+}
+
+.hero {
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 3rem 0;
+  background: linear-gradient(to right, #f0f7ff, #e6f0fa);
+  border-radius: 12px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.content {
+  /* Takes up available space */
+}
+
+.sidebar {
+  /* Fixed width from grid definition */
+}
+
+/* Mobile H5 View Adaptation */
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    /* Stack sidebar below content */
+  }
+
+  .sidebar {
+    display: none;
+    /* Often recommendation is hidden or moved to bottom on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
