@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Inter, Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Background from "@/components/Background";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,9 +12,15 @@ const outfit = Outfit({
   variable: "--font-outfit",
 });
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
+
 export const metadata: Metadata = {
   title: "Arin Rakshe | Portfolio",
-  description: "Software Engineer & Developer",
+  description:
+    "CS + Math @ Northeastern University. I build AI and full-stack software for healthcare, research, and fintech.",
 };
 
 export default function RootLayout({
@@ -25,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} ${outfit.variable}`}>
+      <body className={`${inter.className} ${outfit.variable} ${playfair.variable}`}>
         {children}
       </body>
     </html>

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Home, User, Folder, Code, Plus } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const items = [
@@ -15,8 +14,6 @@ const items = [
 ];
 
 export default function Dock() {
-    const pathname = usePathname();
-
     return (
         <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
             <div className="flex items-center gap-4 px-6 py-3 bg-[rgba(11,12,16,0.8)] backdrop-blur-xl border border-[rgba(255,255,255,0.1)] rounded-full shadow-2xl">
